@@ -1,0 +1,104 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nimra's Clothing</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f0ff;
+            color: #510045;
+        }
+        header {
+            background-color: #910091;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            width: 200px;
+            float: left;
+            background-color: #f2a6c1;
+            height: 100vh;
+            padding: 15px;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+        }
+        nav a {
+            display: block;
+            padding: 10px;
+            color: #510045;
+            text-decoration: none;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        nav a:hover {
+            background-color: #d69fcb;
+        }
+        main {
+            margin-left: 220px;
+            padding: 20px;
+        }
+        .tab {
+            display: none;
+        }
+        .active {
+            display: block;
+        }
+        footer {
+            clear: both;
+            text-align: center;
+            background-color: #910091;
+            color: white;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Nimra's Clothing</h1>
+    </header>
+    <nav>
+        <h3>Categories</h3>
+        <a href="#" onclick="showTab('summer')">Summer Clothing</a>
+        <a href="#" onclick="showTab('winter')">Winter Clothing</a>
+    </nav>
+    <main>
+        <div id="summer" class="tab active">
+            <h2>Summer Clothing</h2>
+            <p>Explore our latest summer collection for a sunny day out.</p>
+            <!-- Sample Product -->
+            <div>
+                <h3>Summer Dress</h3>
+                <p>Price: $49.99</p>
+            </div>
+        </div>
+        <div id="winter" class="tab">
+            <h2>Winter Clothing</h2>
+            <p>Stay warm with our cozy winter collection.</p>
+            <!-- Sample Product -->
+            <div>
+                <h3>Winter Jacket</h3>
+                <p>Price: $89.99</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>© 2023 Nimra's Clothing. All rights reserved.</p>
+    </footer>
+    <script>
+        function showTab(tabName) {
+            const tabs = document.querySelectorAll('.tab');
+            tabs.forEach(tab => {
+                tab.classList.remove('active');
+            });
+            document.getElementById(tabName).classList.add('active');
+        }
+    </script>
+</body>
+</html>
