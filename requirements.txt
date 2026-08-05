@@ -2,3 +2,5 @@ streamlit==1.60.0
 starlette<1.4.0
 crewai
 python-dotenv
+pydantic==2.12.5
+chromadb==1.1.1
